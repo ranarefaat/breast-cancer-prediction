@@ -18,9 +18,9 @@ st.set_page_config(
 @st.cache_resource
 def load_artifacts():
     try:
-        with open(r"C:\Users\Rana\Documents\GitHub\breast-cancer-prediction\model\SVC_model.pkl", "rb") as f:
+        with open("./model/SVC_model.pkl", "rb") as f:
             model = pickle.load(f)
-        with open(r"C:\Users\Rana\Documents\GitHub\breast-cancer-prediction\model\scaler.pkl", "rb") as f:
+        with open("./model/scaler.pkl", "rb") as f:
             scaler = pickle.load(f)
         return model, scaler
     except Exception as e:
